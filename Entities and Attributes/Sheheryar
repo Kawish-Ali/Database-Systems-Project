@@ -1,0 +1,96 @@
+Entities:
+1.	Student
+2.	Instructor
+3.	Courses
+4.	Registered Courses
+5.	Student Assessment
+6.	Student Attendance
+7.	Examination Dates
+8.	Student Allocation
+9.	Invigilator Allocation
+10.	Rooms
+11.	Departments
+12.	Examination Result
+13.	Programs
+14.	Users
+
+Attributes:
+•	Student:
+1.	Student_id (Primary key)
+2.	Name
+3.	Reg_no
+4.	Batch
+5.	Program_id (Foreign key)
+
+•	Instructor:
+1.	Instructor_id (Primary key)
+2.	Instructor_name
+
+•	Courses:
+1.	Course_id (Primary key)
+2.	Course_name
+
+•	Registered Courses:
+1.	Unique_id (Primary key)
+2.	Student_id (Foreign key)
+3.	Course_id (Foreign key)
+4.	Instructor_id (Foreign key)
+5.	Can use a composite key here
+
+•	Student Assessment:
+1.	Unique_id (Primary key)
+2.	Student_id (Foreign key)
+3.	Quiz_marks
+4.	Assignment_marks
+5.	Sessional_1_marks
+6.	Sessional_2_marks
+7.	Terminal_marks
+
+•	Student Attendance:
+1.	Unique_id (Primary key)
+2.	Student_id (Foreign key)
+3.	Total_days
+4.	Total_present_days
+
+•	Examination Schedule:
+1.	Exam_id (Primary key)
+2.	Course_id (Foreign key)
+3.	Room_id (Foreign key)
+4.	Exam_time
+5.	Exam_date
+6.	Exam_type
+
+•	Student Allocation:
+1.	Student_id (Foreign key)
+2.	Exam_id (Foreign key)
+3.	Can use a composite key here
+
+•	Invigilator Allocation:
+1.	Instructor_id (Foreign key)
+2.	Exam_id (Foreign key)
+3.	Can use a composite key here
+
+•	Rooms:
+1.	Room_id (Primary key)
+2.	Room_no
+3.	Department_id (Foreign key)
+
+•	Departments:
+1.	Department_id (Primary key)
+2.	Department_name
+
+•	Examination Result:
+1.	Result_id (Primary key)
+2.	Student_id (Foreign key)
+3.	Exam_id (Foreign key)
+4.	Student_marks
+
+•	Programs:
+1.	Program_id (Primary key)
+2.	Program_name
+
+•	Users:
+1.	User_id (Primary key)
+2.	Username
+3.	Password 
+
