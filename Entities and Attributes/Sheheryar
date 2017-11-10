@@ -1,17 +1,13 @@
 Entities:
 1.	Student
 2.	Instructor
-3.	Courses
-4.	Registered Courses
-5.	Student Assessment
-6.	Student Attendance
-7.	Examination Dates
+3.	Subjects
+7.	Examination Schedule
 8.	Student Allocation
 9.	Invigilator Allocation
 10.	Rooms
 11.	Departments
 12.	Examination Result
-13.	Programs
 14.	Users
 
 Attributes:
@@ -19,38 +15,20 @@ Attributes:
 1.	Student_id (Primary key)
 2.	Name
 3.	Reg_no
-4.	Batch
-5.	Program_id (Foreign key)
+4.  CNIC
+5.  Address
+6.  phone number
 
 •	Instructor:
 1.	Instructor_id (Primary key)
 2.	Instructor_name
+3.  CNIC 
+4.  Address
+5.  phone number
 
-•	Courses:
-1.	Course_id (Primary key)
-2.	Course_name
-
-•	Registered Courses:
-1.	Unique_id (Primary key)
-2.	Student_id (Foreign key)
-3.	Course_id (Foreign key)
-4.	Instructor_id (Foreign key)
-5.	Can use a composite key here
-
-•	Student Assessment:
-1.	Unique_id (Primary key)
-2.	Student_id (Foreign key)
-3.	Quiz_marks
-4.	Assignment_marks
-5.	Sessional_1_marks
-6.	Sessional_2_marks
-7.	Terminal_marks
-
-•	Student Attendance:
-1.	Unique_id (Primary key)
-2.	Student_id (Foreign key)
-3.	Total_days
-4.	Total_present_days
+•	Subject:
+1.	subject_id (Primary key)
+2.	subject_name
 
 •	Examination Schedule:
 1.	Exam_id (Primary key)
@@ -59,38 +37,44 @@ Attributes:
 4.	Exam_time
 5.	Exam_date
 6.	Exam_type
+7.  Department_id (Forign Key)
 
 •	Student Allocation:
 1.	Student_id (Foreign key)
 2.	Exam_id (Foreign key)
 3.	Can use a composite key here
+4.  Room_no (Foreign Key)
+5.  Department_no (Foreign key)
 
 •	Invigilator Allocation:
 1.	Instructor_id (Foreign key)
 2.	Exam_id (Foreign key)
 3.	Can use a composite key here
+4.  Room_no (Foriegn key)
+5.  Department_no (Foriegn key)
 
 •	Rooms:
-1.	Room_id (Primary key)
-2.	Room_no
+1.	Room_no (Primary key)
+2.	floor_no
 3.	Department_id (Foreign key)
+4.  total_seats
 
 •	Departments:
 1.	Department_id (Primary key)
 2.	Department_name
+3.  Total_rooms
 
 •	Examination Result:
 1.	Result_id (Primary key)
 2.	Student_id (Foreign key)
 3.	Exam_id (Foreign key)
 4.	Student_marks
-
-•	Programs:
-1.	Program_id (Primary key)
-2.	Program_name
+5.  Total_marks
+6.  Percentage
 
 •	Users:
 1.	User_id (Primary key)
 2.	Username
-3.	Password 
+3.	Password
+4.  Instuctor_id (Forign Key)
 
